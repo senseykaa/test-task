@@ -189,9 +189,9 @@ export const MobileMenu = styled.div<{ $isOpen: boolean }>`
 	transition: transform 0.3s ease-in-out;
 	z-index: 99;
 
-	@media (max-width: 768px) {
+	${mediaMax.tablet`
 		display: flex;
-	}
+	`}
 
 	ul {
 		flex-direction: column;
@@ -201,7 +201,7 @@ export const MobileMenu = styled.div<{ $isOpen: boolean }>`
 	}
 `;
 
-export const WrpapperInfoMobile = styled.div`
+export const WrapperInfoMobile = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 20px;

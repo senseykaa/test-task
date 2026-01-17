@@ -16,15 +16,10 @@ import {
 	WrapperInfo,
 	WrapperLogo,
 	WrapperPhone,
-	WrpapperInfoMobile,
+	WrapperInfoMobile,
 } from "./styles";
-
-const links = [
-	{ label: "Home", href: "#" },
-	{ label: "About Us", href: "#" },
-	{ label: "Services", href: "#" },
-	{ label: "Pricing", href: "#" },
-];
+import { LINKS } from "./constants";
+import { PHONE_NUMBER } from "constants/index";
 
 export const Header = () => {
 	const [activeLink, setActiveLink] = useState("Home");
@@ -35,6 +30,7 @@ export const Header = () => {
 			<Inner>
 				<WrapperLogo>
 					<Logo src={logo} alt="logo" />
+
 					<h1>
 						PLUMBING <span>SERVICES</span>
 					</h1>
@@ -42,7 +38,7 @@ export const Header = () => {
 
 				<WrapperInfo>
 					<Lists>
-						{links.map((link) => (
+						{LINKS.map((link) => (
 							<ListItem
 								key={link.label}
 								$isActive={activeLink === link.label}
@@ -52,12 +48,12 @@ export const Header = () => {
 						))}
 					</Lists>
 
-					<a href="tel:+1234567890">
+					<a href={`tel:${PHONE_NUMBER.value}`}>
 						<WrapperPhone>
 							<PhoneCall src={phone} alt="phone" />
 							<InnerPhone>
 								<p>24/7 Emergency Call</p>
-								<Phone>123-456-7890</Phone>
+								<Phone>{PHONE_NUMBER.label}</Phone>
 							</InnerPhone>
 						</WrapperPhone>
 					</a>
@@ -66,6 +62,7 @@ export const Header = () => {
 						GET A QUOTE
 					</Button>
 				</WrapperInfo>
+
 				<Burger $isOpen={isMenuOpen} onClick={() => setMenuOpen(!isMenuOpen)}>
 					<div />
 					<div />
@@ -75,7 +72,7 @@ export const Header = () => {
 
 			<MobileMenu $isOpen={isMenuOpen}>
 				<Lists>
-					{links.map((link) => (
+					{LINKS.map((link) => (
 						<ListItem
 							key={link.label}
 							$isActive={activeLink === link.label}
@@ -88,13 +85,15 @@ export const Header = () => {
 					))}
 				</Lists>
 
-				<WrpapperInfoMobile>
-					<a href="tel:+1234567890">
+				<WrapperInfoMobile>
+					<a href={`tel:${PHONE_NUMBER.value}`}>
 						<WrapperPhone>
 							<PhoneCall src={phone} alt="phone" />
+
 							<InnerPhone style={{ display: "block" }}>
 								<p>24/7 Emergency Call</p>
-								<Phone>123-456-7890</Phone>
+
+								<Phone>{PHONE_NUMBER.label}</Phone>
 							</InnerPhone>
 						</WrapperPhone>
 					</a>
@@ -102,7 +101,7 @@ export const Header = () => {
 					<Button variant="orange" size="M">
 						GET A QUOTE
 					</Button>
-				</WrpapperInfoMobile>
+				</WrapperInfoMobile>
 			</MobileMenu>
 		</Container>
 	);

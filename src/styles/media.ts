@@ -2,12 +2,9 @@ import { css } from "styled-components";
 
 export const breakpoints = {
 	desktopLarge: 1920,
-	specialDesktop: 1441,
 	desktop: 1440,
 	laptopLarge: 1366,
-	specialLaptop: 1025,
 	laptop: 1024,
-	specialTablet: 769,
 	tablet: 768,
 	phone: 480,
 	smallPhone: 375,

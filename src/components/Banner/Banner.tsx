@@ -19,12 +19,11 @@ import {
 } from "./styles";
 
 import phone from "assets/images/Banner/phone-call-white.png";
-
 import backgroundImage from "assets/images/Banner/background.png";
-
 import plumberImage from "assets/images/Banner/plumber.png";
 
 import { useParallax } from "hooks/useParallax";
+import { PHONE_NUMBER } from "constants/index";
 
 export const Banner = () => {
 	const parallaxStyle = useParallax(20);
@@ -67,19 +66,22 @@ export const Banner = () => {
 								<Button variant="blue" size="M">
 									REQUEST SERVICE
 								</Button>
+
 								<Button variant="dark" size="M">
-									<a href="tel:+1234567890">
+									<a href={`tel:${PHONE_NUMBER.value}`}>
 										<WrapperPhone>
 											<PhoneCall src={phone} alt="phone" />
+
 											<div>
 												<p>CALL NOW</p>
-												<Phone>123-456-7890</Phone>
+												<Phone>{PHONE_NUMBER.label}</Phone>
 											</div>
 										</WrapperPhone>
 									</a>
 								</Button>
 							</WrapperButtons>
 						</Content>
+
 						<PlumberImage src={plumberImage} alt="Plumber" />
 					</Container>
 				</Box>

@@ -256,6 +256,10 @@ export const WrapperButtons = styled(motion.div)`
 
 	${mediaMax.tablet`
 		align-items: center;
+		
+		button {
+			width: 100%;
+		}
 	`}
 `;
 
