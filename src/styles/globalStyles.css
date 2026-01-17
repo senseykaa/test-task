@@ -1,0 +1,24 @@
+:root {
+	--primary-color: #fefefe;
+	--secondary-color: #9ed5f6;
+	--background-color: #0c244a;
+	--font-family: "Arial", sans-serif;
+	--container: 1200px;
+	--color-line: #dcdee4;
+	--color-orange: #ff8c00;
+	--color-blue: #0a2540;
+	--color-dark: #1a4d7a;
+}
+
+body {
+	color: var(--primary-color);
+	background-color: var(--background-color);
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
