@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { mediaMax } from "styles/media";
+import { mediaMax, mediaMin } from "styles/media";
 
 export const Container = styled.div`
 	max-width: var(--container);
@@ -13,18 +13,28 @@ export const PlumberImage = styled.img`
 	position: absolute;
 	right: 2%;
 	bottom: -100px;
-	height: 550px;
+	height: 600px;
 	width: auto;
 	z-index: 10;
 	pointer-events: none;
 
-	${mediaMax.laptop`
-		height: 450px;
-	`}
+	${mediaMin.desktop`
+  height: 650px;
+  right: 6%;
+ `}
 
-	${mediaMax.tablet`
-		height: 350px;
-	`}
+	${mediaMin.desktopLarge`
+  height: 750px;
+  right: 10%;
+ `}
+
+ ${mediaMax.laptop`
+  height: 450px;
+ `}
+
+ ${mediaMax.tablet`
+  height: 350px;
+ `}
 `;
 
 export const Line = styled.div`
