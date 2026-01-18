@@ -41,6 +41,8 @@ export const Banner = () => {
 							</WrapperBannerImage>
 						</ContainerImage>
 					</BgImageRight>
+
+					<PlumberImage src={plumberImage} alt="Plumber" />
 				</WrapperImage>
 
 				<Box>
@@ -81,8 +83,6 @@ export const Banner = () => {
 								</Button>
 							</WrapperButtons>
 						</Content>
-
-						<PlumberImage src={plumberImage} alt="Plumber" />
 					</Container>
 				</Box>
 			</HeaderBanner>

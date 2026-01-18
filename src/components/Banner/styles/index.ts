@@ -11,36 +11,20 @@ export const Container = styled.div`
 
 export const PlumberImage = styled.img`
 	position: absolute;
-	right: -154px;
-	bottom: -314px;
-	height: 197%;
+	right: 2%;
+	bottom: -100px;
+	height: 550px;
 	width: auto;
 	z-index: 10;
 	pointer-events: none;
 
-	@media (max-width: 1520px) {
-		right: -50px;
-	}
-
-	${mediaMax.laptopLarge`
-		right: 0px;
-		height: 600px;
-		bottom: -372px;
-	`}
-
 	${mediaMax.laptop`
-		height: 460px;
-		bottom: -134px;
+		height: 450px;
 	`}
 
 	${mediaMax.tablet`
-		display: none;
+		height: 350px;
 	`}
-
-	@media (max-height: 970px) {
-		bottom: -232px;
-		height: 164%;
-	}
 `;
 
 export const Line = styled.div`
@@ -62,6 +46,8 @@ export const HeaderBanner = styled.div`
 export const WrapperImage = styled.div`
 	width: 100%;
 	height: calc(100vh - 370px);
+	position: relative;
+	overflow: hidden;
 
 	${mediaMax.laptop`
     height: 480px;
